@@ -2,7 +2,7 @@ package com.myapplication.model
 
 import com.google.gson.annotations.SerializedName
 
-data class PostsModelItem(
+data class PostsItemModel(
 
     @SerializedName("userId") val userId : Int,
 

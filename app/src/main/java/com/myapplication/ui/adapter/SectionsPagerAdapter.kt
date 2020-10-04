@@ -1,13 +1,15 @@
 @file:Suppress("DEPRECATION")
 
-package com.myapplication.ui.main
+package com.myapplication.ui.adapter
 
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.myapplication.R
+import com.myapplication.ui.fragment.OfferingFragment
+import com.myapplication.ui.fragment.RecommendsFragment
+import com.myapplication.ui.fragment.RequestsFragment
 
 private val TAB_TITLES = arrayOf(
     R.string.requests,

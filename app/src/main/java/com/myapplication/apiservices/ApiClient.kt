@@ -1,4 +1,4 @@
-package com.myapplication.ui.main.apiservices
+package com.myapplication.apiservices
 
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -7,14 +7,14 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
-    var BASE_URL: String = "https://jsonplaceholder.typicode.com/"
+    private var BASE_URL: String = "https://jsonplaceholder.typicode.com/"
     val getClient: ApiService
         get() {
             val gson = GsonBuilder()
                 .setLenient()
                 .create()
             val interceptor = HttpLoggingInterceptor()
-            interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+            interceptor.level = HttpLoggingInterceptor.Level.BODY
             val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
             val retrofit = Retrofit.Builder()

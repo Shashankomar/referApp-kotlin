@@ -1,4 +1,4 @@
-package com.myapplication.ui.main
+package com.myapplication.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.myapplication.R
-import com.myapplication.model.PostsModelItem
+import com.myapplication.model.PostsItemModel
 
-class PostAdapter(val context: Context?, private val postList: List<PostsModelItem>?) :
+class PostAdapter(val context: Context?, private val postList: List<PostsItemModel>?) :
     RecyclerView.Adapter<PostAdapter.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_post, parent, false)
         return ViewHolder(view)
